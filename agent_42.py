@@ -4,7 +4,7 @@ import random
 from collections import defaultdict, Counter
 
 import networkx as nx
-import timeout_decorator
+# WINDOWS-LOCAL: import timeout_decorator
 
 '''
 WINDOWS COMPATIBILITY NOTE:
@@ -117,7 +117,7 @@ class StudentAgent(Agent):
     IDLE_SUP_PEN = 0.18         # cost of a support that backs nothing
     QUIET_SUP_PEN = 0.15        # cost of guarding a province nobody threatens
 
-    @timeout_decorator.timeout(1)
+    # WINDOWS-LOCAL: @timeout_decorator.timeout(1)
     def __init__(self, agent_name='Group 42',
                  use_diffusion=True,
                  use_pair_moves=True,
@@ -145,7 +145,7 @@ class StudentAgent(Agent):
     #  Set-up
     # ------------------------------------------------------------------ #
 
-    @timeout_decorator.timeout(1)
+    # WINDOWS-LOCAL: @timeout_decorator.timeout(1)
     def new_game(self, game, power_name):
         self.game = game
         self.power_name = power_name
@@ -218,7 +218,7 @@ class StudentAgent(Agent):
     #  Game state update  +  opponent modelling
     # ------------------------------------------------------------------ #
 
-    @timeout_decorator.timeout(1)
+    # WINDOWS-LOCAL: @timeout_decorator.timeout(1)
     def update_game(self, all_power_orders):
         # Snapshot what we need *before* the engine advances the phase.
         observe = self.use_opponent_model and self.game.phase_type == 'M'
@@ -776,7 +776,7 @@ class StudentAgent(Agent):
     #  Interface
     # ------------------------------------------------------------------ #
 
-    @timeout_decorator.timeout(1)
+    # WINDOWS-LOCAL: @timeout_decorator.timeout(1)
     def get_actions(self):
         start = time.perf_counter()
         try:
