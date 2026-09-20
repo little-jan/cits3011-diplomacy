@@ -101,21 +101,21 @@ class StudentAgent(Agent):
 
     # ---- tunable constants -------------------------------------------------
     TIME_BUDGET = 0.45          # seconds of search inside get_actions
-    GAMMA = 0.80                # spatial discount of the potential field
-    MAX_D = 12                  # distances beyond this contribute nothing
-    COMBAT_K = 3.0              # sharpness of the success sigmoid
-    COMBAT_EDGE = 0.5           # an attack must *exceed* the defence to succeed
-    GRAD_W = 1.20               # weight of the positional gradient
-    CAPTURE_F = 3.00            # occupying a centre we do not own, in Fall
-    CAPTURE_S = 1.00            # ... in Spring (ownership is not yet checked)
-    DEFEND_F = 1.30             # holding one of our own centres, per unit of threat
-    DEFEND_S = 0.60
-    REVERSE_PEN = 0.40          # cost of undoing last turn's move (anti-oscillation)
-    BOUNCE_PEN = 0.10           # cost of a wasted (bounced) move
-    SELF_BOUNCE_PEN = 0.90      # cost of ordering two units to the same place
-    BLOCK_PEN = 0.60            # cost of moving into our own stationary unit
-    IDLE_SUP_PEN = 0.18         # cost of a support that backs nothing
-    QUIET_SUP_PEN = 0.15        # cost of guarding a province nobody threatens
+    GAMMA = 0.576                # spatial discount of the potential field
+    MAX_D = 20                 # distances beyond this contribute nothing
+    COMBAT_K = 5              # sharpness of the success sigmoid
+    COMBAT_EDGE = 0.1          # an attack must *exceed* the defence to succeed
+    GRAD_W = 0.8997               # weight of the positional gradient
+    CAPTURE_F = 3.4803            # occupying a centre we do not own, in Fall
+    CAPTURE_S = 0.9194            # ... in Spring (ownership is not yet checked)
+    DEFEND_F = 3            # holding one of our own centres, per unit of threat
+    DEFEND_S = 0.1
+    REVERSE_PEN = 1          # cost of undoing last turn's move (anti-oscillation)
+    BOUNCE_PEN = 0.3582           # cost of a wasted (bounced) move
+    SELF_BOUNCE_PEN = 1.4773      # cost of ordering two units to the same place
+    BLOCK_PEN = 0.7102            # cost of moving into our own stationary unit
+    IDLE_SUP_PEN = 0.7324         # cost of a support that backs nothing
+    QUIET_SUP_PEN = 0        # cost of guarding a province nobody threatens
 
     # WINDOWS-LOCAL: @timeout_decorator.timeout(1)
     def __init__(self, agent_name='Group 42',
