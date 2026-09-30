@@ -21,7 +21,7 @@ if __name__ == "__main__":
 	run_one_game(agents_dict, save_file='game_for_vis.json')
 
 	'''
-	A JSON file will be saved, which can be visualized using the Web Interface provided on https://github.com/diplomacy/diplomacy?tab=readme-ov-file#web-interface
+A JSON file will be saved, which can be visualized using the Web Interface provided on https://github.com/diplomacy/diplomacy?tab=readme-ov-file#web-interface
 	
 	Follow the instructions to setup the Web Interface: https://github.com/diplomacy/diplomacy?tab=readme-ov-file#web-interface, which may take some time. 
 
