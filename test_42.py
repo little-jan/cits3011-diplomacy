@@ -113,5 +113,5 @@ if __name__ == '__main__':
     print('Evaluating Scenario 2 ...')
     experiment(StudentAgent, POOL_2, repeat_nums=10)
 
-    ablation(POOL_1, repeat_nums=3, label='Scenario 1')
-    ablation(POOL_2, repeat_nums=3, label='Scenario 2')
+    ablation(POOL_1, repeat_nums=10, label='Scenario 1')
+    ablation(POOL_2, repeat_nums=10, label='Scenario 2')
